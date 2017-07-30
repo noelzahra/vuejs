@@ -20,11 +20,6 @@
             <div class="container content">
                 <ul class="links">
                     <li><a href="#">Vue.js</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Store</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Login</a></li>
                 </ul>
                 <img src="../assets/logo.png" class="logo" alt="Vue.js">
             </div>
@@ -62,12 +57,10 @@
     <script>
     new Vue({
         el: "#hello-world-app",
-        data() {
-            return {
+        data: {
                 msg: "Hello World!",
                 content: "Vue.js is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. Content date: " + new Date()
             }
-        }
     });
     </script>
 </body>
