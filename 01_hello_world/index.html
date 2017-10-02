@@ -55,11 +55,25 @@
     <!-- Vue.js cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
     <script>
+    function makeDate() {
+        var date = new Date();
+        var week = ['Sunday', 'Monday', 'Teusday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May',  'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var day = date.getDay();
+        var whichMonth = date.getMonth();
+        var today = week[day];
+        var month = months[whichMonth];
+        var year = date.getFullYear();
+
+        return today + ' ' + month + ', ' + year;
+    }
+
+
     new Vue({
         el: "#hello-world-app",
         data: {
                 msg: "Hello World!",
-                content: "Vue.js is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. Content date: " + new Date()
+                content: "Vue.js is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. Content date: " + makeDate()
             }
     });
     </script>
